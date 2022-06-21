@@ -1,0 +1,43 @@
+Essa resenha foi um passo a passo que achei legal para pegar cada passo da execução programa.
+Escrevendo ficou melhor de entender e acompanhar o que estava acontecendo.
+É uma coisa que será legal fazer sempre que tiver alguma dificuldade, pois depois de escrever ficou mais claro.
+Eu acompanhei cada laço do while.
+
+while(indice < 4)
+
+1ª execução
+indice = 0
+total = 0
+imprime nota no indice 0
+total == total(ou 0) + nota[indice] no caso se for passado valor 4 representa 4
+total = 4
+incrementa indice com + 1
+indice agora = 1
+
+2ª execução
+indice = 1
+imprime nota no indice 1
+total == total(ou 4) + nota[indice] no caso se for passado valor 4 representa 4
+total = 8
+incrementa indice com + 1
+indice agora = 2
+
+3ª execução
+indice = 2
+imprime nota no indice 2
+total == total(ou 8) + nota[indice] no caso se for passado valor 4 representa 4
+total = 12
+incrementa indice com + 1
+indice agora = 3
+
+1ª execução
+indice = 3
+imprime nota no indice 3
+total == total(ou 12) + nota[indice] no caso se for passado valor 4 representa 4
+total = 16
+incrementa indice com + 1
+indice agora = 4
+
+Como 4 não passa no teste do while o programa encerra o while.
+Imprime total / 4 ou 16 / 4.
+Finaliza o programa
