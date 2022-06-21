@@ -13,7 +13,7 @@ int main(){
 		cout << "Pós-incremento com b: "<< b << endl;//... então o incremento acontece aqui.
 		
 		//Declaração não garantida
-		cout << "Pré-incremento sem garantia: "<< ++c << c * 3 <<  endl;
+		cout << "Pré-incremento sem garantia: "<< (++c) << c * 3 <<  endl;
 		//A intenção acima é que o valor seja incrementado e depois multiplicado ( 1 x 3 = 3) 
 		//Mas o resultado é multiplicação e depois concatenado. resultado: 13
 		//Com garantia
