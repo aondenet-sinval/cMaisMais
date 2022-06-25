@@ -28,5 +28,9 @@ unsigned int a = 20, b = 10; double c, d = 1.9;
 	cout << "Terceiro resultado - variável int definida: "<< b + d << endl;//10(int) + 1.9(double)= 11.9(double);
 	linha();
 	//Podemos alterar a precedencia mudando o valor (sem mudar o tipo) usando o cast de tipos:
-	cout << "Terceiro resultado - tipo com cast: "<<  a + (int) d << endl;//cast: 20(int) + 1.9(double)= 21(int) e não 21.9;	
+	cout << "Terceiro resultado - tipo com cast: "<<  a + (int) d << endl;//cast: 20(int) + 1.9(double)= 21(int) e não 21.9;
+	int a1, b1;
+	cout << "Entre com uma fração (numerador e denominador): ";
+	cin >> a1 >> b1;
+	cout << "A fração em decimal é: " << (float) a1 / b1 << endl;	
 }
