@@ -1,12 +1,16 @@
 #include <iostream>
 using namespace std;
-//Usando estruturas como argumentos de função
-//Algoritmo: Criar uma estrutura que represente detalhes do carro.
-//Pedir os dados ao usuário e apresentar na tela os dados que foram inseridos.
-#define lenchar 15
+/*
+Objetivo:
+Demonstrar uso de estruturas como argumentos de função.
+Algoritmo:
+Criar uma estrutura que represente detalhes do carro.
+Pedir os dados ao usuário e apresentar na tela os dados que foram inseridos.
+*/
+#define LENCHAR 15
 struct Carro{
-    char cor[lenchar];
-    char marca[lenchar];
+    char cor[LENCHAR];
+    char marca[LENCHAR];
     int placa;
     int ano;
 }Carro;
