@@ -3,7 +3,7 @@ using namespace std;
 /*
 Nota: esse programa é uma replicação do programa anterior Struct_2
 Objetivo:
-Demonstrar uso de arrays estruturas.
+Demonstrar o uso de estruturas com arrays.
 Algoritmo:
 Criar uma estrutura que represente detalhes do carro.
 Pedir os dados ao usuário para que registre 2 carros.
@@ -43,10 +43,12 @@ cout << "Quantos carros você deseja cadastrar agora? " << endl;
 cin >> QTDE;
 struct Carro novosCarros[QTDE];//inicialização
 int i;
+    //Registro de novos carros inicando com o índice 0
     for(i = 0; i < QTDE; i++){
 		cout << "Efetue o cadastro do carro " << i << ":\n";
 		obtemCarro(novosCarros, i);
     }
+    //Impressão de todos itens do array
     for(i = 0; i < QTDE; i++){
 		cout << "Detalhe do carro cadastrado " << i << ":\n";
 		imprimeCarro(novosCarros[i]);
