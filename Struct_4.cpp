@@ -27,7 +27,6 @@ Embora o valor da variável estivesse na função cadastrarCarro.
 Então refiz esse trecho do código.
 */
 #define LENCHAR 15
-
 struct Carro{
     char cor[LENCHAR];
     char marca[LENCHAR];
@@ -45,6 +44,7 @@ struct CarroEletrico{
 
 
 void cadastrarCarro(struct CarroEletrico oCarro[], int indice){
+int erro;
     cout << "Insira o tempo de carga da bateria: " << endl;
     cin.getline(oCarro[indice].TempoCarga, LENCHAR);
     cout << "Insira a cor do carro" << endl;
@@ -53,14 +53,15 @@ void cadastrarCarro(struct CarroEletrico oCarro[], int indice){
     cin.getline(oCarro[indice].DetalhesMarca.marca, LENCHAR);
     cout << "Insira o número da placa" << endl;
     cin >> oCarro[indice].DetalhesPlaca.placa;
-//    cin.ignore('\n');
-//    while(oCarro[indice].DetalhesPlaca.placa[6] == false){//teste para ver se foi deixado em branco.
-//        cin >> oCarro[indice].DetalhesPlaca.placa[6];
-//    };
     cout << "Insira o ano de fabricação" << endl;
     cin >> oCarro[indice].DetalhesAno.ano;
+    if(!(oCarro[indice].DetalhesPlaca.placa) || !(oCarro[indice].DetalhesAno.ano)){
+        throw (erro);
+    }
     cin.ignore();
+
 }
+
 
 void imprimirCarro(struct CarroEletrico novoCarro){
 cout << "Cor " << novoCarro.DetalhesCor.cor << " marca " << novoCarro.DetalhesMarca.marca << " placa " << novoCarro.DetalhesPlaca.placa << " ano " << novoCarro.DetalhesAno.ano << " e tempo de carga da bateria " << novoCarro.TempoCarga << "."<< endl;
@@ -69,20 +70,25 @@ cout << "Cor " << novoCarro.DetalhesCor.cor << " marca " << novoCarro.DetalhesMa
 
 int main(){
 int QTDE;
-//Deixando o usuário do programa escolher a quanidade de carros a ser cadastrada.
-cout << "Digite a quantidade de carros para cadastro: " << endl;
-cin >> QTDE;
-cin.ignore();
-struct CarroEletrico novosCarros[QTDE];//inicialização
-int i;
-    //Registro de novos carros inicando com o índice 0
-    for(i = 0; i < QTDE; i++){
-		cout << "Efetue o cadastro do carro " << i << ":\n";
-		cadastrarCarro(novosCarros, i);
-    }
-    //Impressão de todos itens do array
-    for(i = 0; i < QTDE; i++){
-		cout << "Detalhe do carro cadastrado " << i << ":\n";
-		imprimirCarro(novosCarros[i]);
-    }
+        //Deixando o usuário do programa escolher a quanidade de carros a ser cadastrada.
+        cout << "Digite a quantidade de carros para cadastro: " << endl;
+        cin >> QTDE;
+        cin.ignore();
+        struct CarroEletrico novosCarros[QTDE];//inicialização
+        int i;
+        try{
+            //Registro de novos carros inicando com o índice 0
+            for(i = 0; i < QTDE; i++){
+                cout << "Efetue o cadastro do carro " << i << ":\n";
+                cadastrarCarro(novosCarros, i);
+            }
+        }catch(int erro){
+            cout << "Preencha os dados placa e ano corretamente." << endl;
+            return 0;
+        }
+            //Impressão de todos itens do
+            for(i = 0; i < QTDE; i++){
+                cout << "Detalhe do carro cadastrado " << i << ":\n";
+                imprimirCarro(novosCarros[i]);
+            }
 }
