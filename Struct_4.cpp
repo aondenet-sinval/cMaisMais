@@ -84,7 +84,7 @@ int QTDE;
             }
         }catch(int erro){
             cout << "Preencha os dados placa e ano corretamente." << endl;
-            return 0;
+            return 0;//Em caso de erro a execução termina.
         }
             //Impressão de todos itens do
             for(i = 0; i < QTDE; i++){
