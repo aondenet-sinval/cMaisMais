@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+cout.setf (ios::fixed | ios::showpoint);
 	int Dividendo, Divisor, Resto;
 	float Valor1, Valor2, Produto;
 	string Texto1, Texto2, nome;
@@ -16,10 +17,10 @@ int main(){
 	cin >> Valor2;
 	cout << nome;
 	cin >> nome;
+	cout.precision(2);
 	Produto = Valor1 * Valor2;
 
-			cout << nome << setw(5) << " o produto é: " << Produto;
-			cout.precision(5);
+			cout << nome << " o produto é: " << Produto;
 	cout << "\nDigite um valor que deseja saber o resto da divisão.\n";
 	cout << "Dividendo: \n";
 	cin >> Dividendo;

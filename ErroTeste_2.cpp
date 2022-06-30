@@ -1,28 +1,29 @@
 #include <iostream>
-#include <cstdlib>
-#include <cmath>
 #include <cstring>
-#include <string.h>
 using namespace std;
+//Teste de comprimento de cadeia de caracteres
+int Nome(void){
+char nome[10], sobrenome[20], nomes[30];
+    cout <<  "Entre com o nome: " << endl;
+    cin.getline(nome, 10);
 
-char Valor( char nome, char sobrenome){
-    if(strlen(nome) < strlen(sobrenome)){
-     throw 1;
+    cout <<  "Entre com o sobrenome: " << endl;
+    cin.getline(sobrenome, 20);
+string nome_err;
+    if((strlen(nome)) > (strlen(sobrenome))){
+     throw nome_err;
     }
-    nomes = nome + " " + sobrenome;
-    return nomes;
+    cout << "Seu nome é: "<< nome << " " << sobrenome << endl;
+    return 0;
 }
 
 int main() {
-char nome[10], sobrenome[20];
-    cout <<  "Entre com o nome: " << endl;
-    cin >> nome;
-
-    cout <<  "Entre com o sobrenome: " << endl;
-    cin >> sobrenome;
-    Valor(nome, sobrenome);
-    if(nValue){
-        cout << "Erro de nome." << endl;
+    try{
+         Nome();
     }
+    catch(string nome_err){
+        cout << "Erro: você não digitou um nome válido. \nSeu nome é menor que seu sobrenome?" << endl;
+    }
+
 
 }
