@@ -20,6 +20,8 @@ char texto[20];
 
 int processar_leitura(void){
 char nome_arquivo[20], ler, errou;
+    //Podemos ler conforme abaixo opção 1 (interativa)
+
     ifstream leitura;
     cout << "Qual arquivo" << endl;
     cin.getline(nome_arquivo, 20);
@@ -27,9 +29,22 @@ char nome_arquivo[20], ler, errou;
     if(leitura.fail()){
         throw errou;
     }
+
     while((ler = leitura.get()) != EOF){//lendo
     cout << ler;//imprimindo na tela
     }
+
+    //Ou lemos conforme abaixo opção 2
+    /*
+    string oTexto;
+    ifstream leitura("leitura.txt");
+    if(leitura.fail()){
+        throw errou;
+    }
+    while(getline(leitura, oTexto)){
+        cout << oTexto;
+    }
+    */
     leitura.close();
     return 0;
 }
@@ -51,6 +66,6 @@ int op;
         }
         break;
         }
-
+    return 0;
 }
 
