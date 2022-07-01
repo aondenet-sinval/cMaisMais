@@ -10,12 +10,16 @@ public:
         void seguir(){ cout << "Você escolheu seguir em frente..." << endl; }
         void esquerda(){ cout << "Você escolheu girar a esquerda..." << endl; }
         void direita();//método que será criado fora da classe
+        int aceleracao(int velocidade);
 };
 //definindo método fora da definição de classe
 void Carro::direita(){ cout << "Você escolheu girar a direita..." << endl; };
+int Carro::aceleracao(int velocidade){
+    return velocidade;
+}
 
 int main(){
-int op;
+int op, veloz;
     Carro ObjUm;
     ObjUm.marca = "Fiat";
     ObjUm.modelo = "Strada";
@@ -36,5 +40,9 @@ int op;
             ObjUm.direita();
             break;
     }
+    cout << "Digite a velocidade preferida..." << endl;
+    cin >> veloz;
+    veloz = ObjUm.aceleracao(veloz);
+    cout << "Velocidade: " << veloz << " Km/Hora." << endl;
     return 0;
 }
