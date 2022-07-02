@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-//Treinamento: Encapsulamento e Herança
+//Treinamento: Encapsulamento e Herança múltipla (ou multinivel)
 
 class Bicicleta{
     private:
@@ -52,16 +52,32 @@ class BiEletrica: public Bicicleta{
     }
 };
 
+class BicicletaSolar: public BiEletrica{
+    private:
+    int hora_autonomia;
+    public:
+    //método setter:
+    void setAutonomia(int aut){
+        hora_autonomia = aut;
+    }
+    //método getter:
+    int getAutonomia(){
+        return hora_autonomia;
+    }
+};
+
 int main(){
-    int velocidade_escolhida;
-    BiEletrica Moderna;
+    BicicletaSolar Moderna;//A última na herança da classe herda todos os membros das classes super.
     Moderna.cor = "rosa";
     Moderna.modelo = "Monark";
     Moderna.setVelocidadeMax(60);
+    Moderna.cor = "Azul";
     Moderna.setTempoCarga(200);
     Moderna.setPotencia(1000);
-    Moderna.setGenero("feminino");
+    Moderna.setAutonomia(24);
     cout << "Cor: " << Moderna.cor << " modelo: " << Moderna.modelo << " velocidade máxima: " << Moderna.getVelocidadeMax() << "Km/h." << endl;
-    cout << "Potencia: " << Moderna.getPotencia() << ", tempo de carga: " << Moderna.getTempoCarga() << " e genero: " << Moderna.getGenero() << "." << endl;
+    cout << "Potencia: " << Moderna.getPotencia() << ", tempo de carga: " << Moderna.getTempoCarga() << "." << endl;
+    cout << "Autonomia: " << Moderna.getAutonomia() << endl;
     return 0;
 }
+
