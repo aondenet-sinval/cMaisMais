@@ -21,6 +21,14 @@ class Bicicleta{
     int getVelocidadeMax(){
         return velocidade_max;
         }
+    //Setter
+    void setGenero(string g){
+        genero = g;
+    }
+    //Getter
+    string getGenero(){
+        return genero;
+        }
 };
 
 class BiEletrica: public Bicicleta{
@@ -46,13 +54,14 @@ class BiEletrica: public Bicicleta{
 
 int main(){
     int velocidade_escolhida;
-    BiEletrica Feminina;
-    Feminina.cor = "rosa";
-    Feminina.modelo = "Monark";
-    Feminina.setVelocidadeMax(60);
-    Feminina.setTempoCarga(200);
-    Feminina.setPotencia(1000);
-    cout << "Cor: " << Feminina.cor << " modelo: " << Feminina.modelo << " velocidade máxima: " << Feminina.getVelocidadeMax() << endl;
-    cout << "Potencia: " << Feminina.getPotencia() << " e tempo de carga: " << Feminina.getTempoCarga() << endl;
+    BiEletrica Moderna;
+    Moderna.cor = "rosa";
+    Moderna.modelo = "Monark";
+    Moderna.setVelocidadeMax(60);
+    Moderna.setTempoCarga(200);
+    Moderna.setPotencia(1000);
+    Moderna.setGenero("feminino");
+    cout << "Cor: " << Moderna.cor << " modelo: " << Moderna.modelo << " velocidade máxima: " << Moderna.getVelocidadeMax() << "Km/h." << endl;
+    cout << "Potencia: " << Moderna.getPotencia() << ", tempo de carga: " << Moderna.getTempoCarga() << " e genero: " << Moderna.getGenero() << "." << endl;
     return 0;
 }
