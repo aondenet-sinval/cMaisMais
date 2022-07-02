@@ -11,6 +11,12 @@ public:
         void esquerda(){ cout << "Você escolheu girar a esquerda..." << endl; }
         void direita();//método que será criado fora da classe
         int aceleracao(int velocidade);
+        //definindo construtor dentro da classe
+        Carro(string a, string b, int c){
+            marca = a;
+            modelo = b;
+            ano = c;
+        };
 };
 //definindo método fora da definição de classe
 void Carro::direita(){ cout << "Você escolheu girar a direita..." << endl; };
@@ -19,11 +25,11 @@ int Carro::aceleracao(int velocidade){
 }
 
 int main(){
-int op, veloz;
-    Carro ObjUm;
-    ObjUm.marca = "Fiat";
-    ObjUm.modelo = "Strada";
-    ObjUm.ano = 2022;
+int op, veloz, c;
+string a, b;
+    cout << "Digite as definições do carro na ordem: marca - modelo - ano. " << endl;
+    cin >> a >> b >> c;
+    Carro ObjUm(a, b, c);//usando o construtor
 
     cout << "Marca: " << ObjUm.marca << ". Modelo: " << ObjUm.modelo << ". Ano: " << ObjUm.ano << endl;
     cout << "Deseja seguir(aperte 1), esquerda(2) ou direita(3) " << endl;
