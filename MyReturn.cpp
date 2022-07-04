@@ -2,20 +2,20 @@
 
 using namespace std;
 
-void Valor(void){
+void vValor(void){
 	int valor;
 	cout << "Informe um valor: ";
 	cin >> valor;
 	if( valor >= 0){
-		return valor;
+		cout << valor;
 	}
 	cout << "Valor: " << valor << endl;
-	return -valor;
-	
+	cout << -valor;
+
 }
 
 
-int main(){ 
-	Valor();	
-	
+int main(){
+	vValor();
+
 }

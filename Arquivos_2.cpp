@@ -3,7 +3,7 @@
 
 using namespace std;
 //Processando arquivos: leitura
-int processar_leitura(void){
+int processarLeitura(void){
 char ver[20], ler;
     ifstream leitura;
     cout << "Qual arquivo" << endl;
@@ -22,7 +22,7 @@ int main(){
     if(leitura.fail()){
         cout << "Arquivo não encontrado" << endl;
     }else{
-        processar_leitura();
+        processarLeitura();
     }
 }
 

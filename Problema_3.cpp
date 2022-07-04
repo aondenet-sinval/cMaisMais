@@ -9,11 +9,11 @@ int i;
 	}
 	cout << endl;
 }
-/* 
+/*
 Uma funcao que encontra o menor valor em um
 "a" e "b" (inclusive)
 */
-int menor_indice(int v[], int a, int b){
+int menorIndice(int v[], int a, int b){
 int i;
 int menor;
 	menor = a;
@@ -25,7 +25,7 @@ int menor;
 	return menor;
 	}
 /* Uma funcao que troca os valores entre dois elementos de um array */
-void troca_v( int vet[], int i, int j){
+void trocaV( int vet[], int i, int j){
 int aux;
 	aux = vet[i];
 	vet[i] = vet[j];
@@ -41,8 +41,8 @@ int i, j, idx_menor_elem;
 /* indice do menor valor no array entre i e tam-1 */
 	for(i = 0; i < tam; i += 1){
 		imprimePassos( lista, tam, i );
-		idx_menor_elem = menor_indice( lista, i, tam - 1 );
-		troca_v( lista, i, idx_menor_elem );
+		idx_menor_elem = menorIndice( lista, i, tam - 1 );
+		trocaV( lista, i, idx_menor_elem );
 		}
 	}
 int main (){

@@ -3,8 +3,8 @@
 #include <cmath>
 #include <cstring>
 using namespace std;
-type
-int Idade(int idade){
+
+int aIdade(int idade){
     try{
 
         if(idade > 60){
@@ -20,13 +20,14 @@ int Idade(int idade){
     return 0;
 }
 
-int calcular_idade(void){
+int calcularIdade(void){
     int idade;
     cout << "qual sua idade: " << endl;
     cin >> idade;
-    Idade(idade);
+    aIdade(idade);
+    return 0;
 }
 
 int main(){
-    calcular_idade();
+    calcularIdade();
 }

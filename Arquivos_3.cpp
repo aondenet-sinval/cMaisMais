@@ -3,7 +3,7 @@
 
 using namespace std;
 //Processando arquivos: escrita
-int criar_arquivo(void){
+int criarArquivo(void){
 char texto[20];
     // Criar e abrir arquivo
     ofstream MeuArq("leitura_2.txt");
@@ -18,7 +18,7 @@ char texto[20];
     return 0;
 }
 
-int processar_leitura(void){
+int processarLeitura(void){
 char nome_arquivo[20], ler, errou;
     //Podemos ler conforme abaixo opção 1 (interativa)
 
@@ -34,33 +34,22 @@ char nome_arquivo[20], ler, errou;
     cout << ler;//imprimindo na tela
     }
 
-    //Ou lemos conforme abaixo opção 2
-    /*
-    string oTexto;
-    ifstream leitura("leitura.txt");
-    if(leitura.fail()){
-        throw errou;
-    }
-    while(getline(leitura, oTexto)){
-        cout << oTexto;
-    }
-    */
     leitura.close();
     return 0;
 }
 
 int main(){
 int op;
-    cout << "Seecione a opção: \n1 - Criar arquivo \n2- Ler." << endl;
+    cout << "Selecione a opção: \n1 - Criar arquivo \n2- Ler." << endl;
     cin >> op;
     cin.ignore();
     switch(op){
     case 1:
-        criar_arquivo();
+        criarArquivo();
         break;
     case 2:
         try{
-        processar_leitura();
+        processarLeitura();
         }catch(char errou){
             cout << "Arquivo não encontrado" << endl;
         }

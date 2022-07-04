@@ -2,7 +2,7 @@
 using namespace std;
 //BubleSort Otimizado
 #define TAM 9
-void imprimePassos (int v[], int tam, int passo){
+void imprimePassos(int v[], int tam, int passo){
 int i;
 	cout << "Passo " << passo << ": --> ";
 	for(i = 0; i < tam; i += 1){
@@ -17,7 +17,7 @@ int aux;
 	vet[i] = vet[j];
 	vet[j] = aux;
 }
-/* 
+/*
 Uma funcao que ordena um array de inteiros usando o algoritmo de
 Bubble sort.
 Entrada: array a ser ordenado -- lista[]

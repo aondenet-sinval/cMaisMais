@@ -4,7 +4,7 @@ using namespace std;
 
 void Valor(void){
 	int ch;
-	cout << "Voce quer instruções? (s/n): ";
+	cout << "Voce quer as instruções? (s/n): ";
 	ch = cin.get();
 	/* Termina se resposta for n */
 	if (ch == 'n' || ch == 'N')//Acento agudo 'n' ou 'N'
@@ -16,7 +16,7 @@ void Valor(void){
 	cin >> nome;
 	cout << "Seu nome é: " << nome << endl;
 	//return;//Em funções void o return é opcional para finalizar a função.
-	
+
 }
 
 int abs(int x){

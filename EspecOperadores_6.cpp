@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-float a = 200;//variável global
+ const float a = 200;//variável global
 
-float soma_1(float b){
+float somaUm(float b){
 //variaveis locais: c e resultado
     cout << "Valor do parametro soma_1(): " << b << endl;
     float resultado;
@@ -13,7 +13,7 @@ float soma_1(float b){
     return resultado;
 }
 
-float soma_2(float c){
+float somaDois(float c){
 //variaveis locais: d e resultado
     cout << "Valor do parametro soma_2(): " << c << endl;
     float resultado;
@@ -23,7 +23,7 @@ float soma_2(float c){
     return resultado;
 }
 
-float soma_3(float c){
+float somaTres(float c){
 //variaveis locais: d e resultado
     cout << "Valor do parametro soma_3(): " << c << endl;
     float resultado;
@@ -38,6 +38,6 @@ int main(){
 float f, g;
     cout << "Defina um valor para soma: " << endl;
     cin >> f;
-    g = soma_1(soma_2(soma_3(f)));//Sequencia de execução/controle: soma_3(), soma_2(), soma_1()
+    g = somaUm(somaDois(somaTres(f)));//Sequencia de execução/controle: soma_3(), soma_2(), soma_1()
     cout << "A soma total é: " << g + a << endl;
 }

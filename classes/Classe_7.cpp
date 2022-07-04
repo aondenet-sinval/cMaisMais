@@ -31,5 +31,6 @@ int main(){
     MeuPassaro.Som();//método
     TeVi.Som();//método
     Croco.Som();//método
-    return 0;//o mesmo método aplicado de forma diferente
+    return 0;
+    //polimorfismo significa: o mesmo método aplicado de forma diferente
 }

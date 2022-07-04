@@ -5,7 +5,7 @@ using namespace std;
 Escrever uma função que some dois arrays de floats, do mesmo tamanho. Dar o resultado em um terceiro
 array. O tamanho dos arrays é também passado para a função.
 */
-void soma_array( float arr1[], float arr2[], float arr3[], int tam ){
+void somaArray( float arr1[], float arr2[], float arr3[], int tam ){
 int i;
 //Resolvendo o problema com for:
 /*
@@ -29,5 +29,5 @@ int main(){
 	float arr1[] = {1, 2, 3, 4};
 	float arr2[] = {5, 6, 7, 8};
 	float arr3[4];
-	soma_array(arr1, arr2, arr3, tam);
+	somaArray(arr1, arr2, arr3, tam);
 }

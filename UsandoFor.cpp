@@ -4,20 +4,19 @@
 using namespace std;
 
 int main(){
-//int a;
-//	a = 0;
-	/*Usando while
+int a = 0;
+	//Usando while
 	while(a < 10){
 		cout << "valor de a: " << a << endl;
 		a++;
 	}
-	*/
+
 	/*
 	//A mesma instrução usando for
 	for(a;a < 10;a++){
-		cout << "Valor de a: " << a << endl;	
+		cout << "Valor de a: " << a << endl;
 	}
-	*/
+
 	/*
 	//Usando vários inicializadores e incrementos
 	int contador, total;

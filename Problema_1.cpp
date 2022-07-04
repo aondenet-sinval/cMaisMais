@@ -24,7 +24,7 @@ int i;
 }
 */
 //Solução com for:
-int pesquisa_linear(int arr[], int tam, int chave){
+int pesquisaLinear(int arr[], int tam, int chave){
 int i;
 	for(i = tam - tam;i < tam;i +=1){
 		if (chave == i){
@@ -38,6 +38,6 @@ int indice, chave;
 	int arr[TAMANHO] = {2, 4, 6, 8};
 	cout << "Digite uma chave: \n";
 	cin >> chave;
-	indice = pesquisa_linear(arr, TAMANHO, chave);
-	cout << "Array posição " << chave << " : " << indice << endl;	
+	indice = pesquisaLinear(arr, TAMANHO, chave);
+	cout << "Array posição " << chave << " : " << indice << endl;
 }

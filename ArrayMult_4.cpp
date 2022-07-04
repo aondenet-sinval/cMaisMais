@@ -2,15 +2,15 @@
 using namespace std;
 #define ALTURA 7
 #define LARGURA 7
-void seleciona_elem(char [][LARGURA], int);
+void selecionaElem(char [][LARGURA], int);
 void pontos(char [][LARGURA], int);
-void imprime_matriz(char [][LARGURA], int);
-void marca_triang(char [][LARGURA], int);
+void imprimeMatriz(char [][LARGURA], int);
+void marcaTriang(char [][LARGURA], int);
 void flip(char [][LARGURA], int);
-void espera_entrada(void);
+void esperaEntrada(void);
 // *** DEFINICAO DE FUNCOES *******
 // funcao que imprime um array 2-D nlin X LARGURA
-void imprime_matriz(char matriz[][LARGURA], int nlin){
+void imprimeMatriz(char matriz[][LARGURA], int nlin){
 int x, y;
 	for(y = 0; y < nlin; y += 1){
 		for(x = 0; x < LARGURA; x += 1)
@@ -29,7 +29,7 @@ void pontos( char matriz[][LARGURA], int nlin){
 /* funcao que preenche os elementos selecionados da matriz com um
 * quadrado e imprime a matriz
 */
-void seleciona_elem(char matriz[][LARGURA], int nlin){
+void selecionaElem(char matriz[][LARGURA], int nlin){
 int x, y;
 	cout << "\nEntre com as coordenadas na forma \"y x\"." << endl;
 	cout << "Use numeros negativos para terminar." << endl;
@@ -38,7 +38,7 @@ int x, y;
 	while (x >= 0 && y >= 0){
 		matriz[y][x] = '@';
 		// preenche o elemento com quadrado
-		imprime_matriz(matriz, nlin);
+		imprimeMatriz(matriz, nlin);
 		// imprime a matriz
 		cout << "Coordenadas: ";
 		cin >> y >> x;
@@ -47,7 +47,7 @@ int x, y;
 /* funcao que marca todos os elementos abaixo da diagonal principal de
 * um array nlin X LARGURA com quadrados
 */
-void marca_triang(char matriz[][LARGURA], int nlin){
+void marcaTriang(char matriz[][LARGURA], int nlin){
 int x, y;
 	cout << "Triangulo" << endl;
 	pontos(matriz, nlin);
@@ -56,7 +56,7 @@ int x, y;
 			matriz[y][x] = '@';
 }
 // funcao que rotaciona (’flip’) cada linha array tendo
-// diagonal principal como centro da rotaÃ§Ã£o
+// diagonal principal como centro da rotação
 void flip(char matriz[][LARGURA], int nlin){
 int x, y;
 int temp;
@@ -78,15 +78,15 @@ char c;
 int main(){
 char matriz [ALTURA] [LARGURA];
 	pontos(matriz, ALTURA);
-	seleciona_elem(matriz, ALTURA);
+	selecionaElem(matriz, ALTURA);
 	pausar();
 	flip(matriz, ALTURA);
-	imprime_matriz(matriz,ALTURA);
+	imprimeMatriz(matriz,ALTURA);
 	pausar();
-	marca_triang( matriz, ALTURA);
-	imprime_matriz( matriz, ALTURA);
+	marcaTriang( matriz, ALTURA);
+	imprimeMatriz( matriz, ALTURA);
 	pausar();
 	flip( matriz, ALTURA);
-	imprime_matriz(matriz, ALTURA);
+	imprimeMatriz(matriz, ALTURA);
 	pausar();
 }

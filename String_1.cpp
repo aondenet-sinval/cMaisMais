@@ -2,14 +2,14 @@
 using namespace std;
 
 int main(){
-string animal1 = "rato";
+string animal = "rato";
 
-	cout << "Numero de caracteres de " << animal1 << ": " << animal1.length() << endl;
-	cout << "Numero de caracteres de " << animal1 << ": " << animal1.size() << endl;
+	cout << "Numero de caracteres de " << animal << ": " << animal.length() << endl;
+	cout << "Numero de caracteres de " << animal << ": " << animal.size() << endl;
 
 	//trocando caracter;
-	animal1[3] = 'a';
-	cout << "Agora o animal é: " << animal1 << endl;
-    animal1[0] = 'p';
-	cout << "Agora o animal é: " << animal1 << endl;
+	animal[3] = 'a';
+	cout << "Agora o animal é: " << animal << endl;
+    animal[0] = 'p';
+	cout << "Agora o animal é: " << animal << endl;
 }
